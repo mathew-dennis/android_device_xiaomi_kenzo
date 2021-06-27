@@ -40,3 +40,7 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # inherit from the proprietary version
 -include vendor/xiaomi/kenzo/BoardConfigVendor.mk
+
+## ubuntu touch ##
+
+BOARD_KERNEL_CMDLINE += console=tty0
