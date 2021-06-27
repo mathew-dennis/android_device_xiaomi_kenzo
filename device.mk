@@ -56,3 +56,16 @@ PRODUCT_COPY_FILES += \
 
 # Inherit from msm8956-common
 $(call inherit-product, device/xiaomi/msm8956-common/msm8956.mk)
+
+### Ubuntu Touch ###
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/ubuntu/70-android.rules:system/halium/lib/udev/rules.d/70-android.rules \
+    $(LOCAL_PATH)/ubuntu/touch.pa:system/halium/etc/pulse/touch.pa \
+    $(LOCAL_PATH)/ubuntu/android.conf::system/halium/etc/ubuntu-touch-session.d/android.conf \
+    $(LOCAL_PATH)/ubuntu/rc.local:system/halium/etc/rc.local \
+
+PRODUCT_PACKAGES += \
+    libaudioflingerglue \
+    minimediaservice \
+    miniafservice
